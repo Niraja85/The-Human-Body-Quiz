@@ -9,6 +9,10 @@ ans = input("Are you ready to play?\n").lower()
 if ans != "yes":
     quit()
 
+""" Creating variables from q1 to q10 which includes questions and choices,
+that will act as key in dictionary named questions.
+"""
+
 q1 = """ Because its cells has mitochondria,which of your muscles never tires?
 a. Tongue
 b. Triceps
