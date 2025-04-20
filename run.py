@@ -9,6 +9,8 @@ ans = input("Are you ready to play?\n").lower()
 if ans != "yes":
     quit()
 
+score = 0    
+
 """ Creating variables from q1 to q10 which includes questions and choices,
 that will act as key in dictionary named questions.
 """
@@ -73,3 +75,19 @@ b. 55
 c. 72
 d. 87
 """
+
+"""
+Created a dictionary with q1 to q10 as 'key' and correct answer as 'value'
+"""
+questions = {
+    q1 = "c",
+    q2 = "a",
+    q3 = "d",
+    q4 = "d",
+    q5 = "a",
+    q6 = "a",
+    q7 = "b",
+    q8 = "a",
+    q9 = "a",
+    q10 = "c"
+}
