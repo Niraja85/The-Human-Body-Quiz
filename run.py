@@ -3,7 +3,7 @@ A welcome statement for starting the quiz and if the user
 says no, the game quits, and if chooses yes to play the game, 
 questions are displayed.
 """
-print("Welcome to The Human Body Quiz")
+print("Welcome to Fun facts about the Human Body Quiz")
 ans = input("Are you ready to play?\n").lower()
 
 if ans != "yes":
@@ -80,14 +80,44 @@ d. 87
 Created a dictionary with q1 to q10 as 'key' and correct answer as 'value'
 """
 questions = {
-    q1 = "c",
-    q2 = "a",
-    q3 = "d",
-    q4 = "d",
-    q5 = "a",
-    q6 = "a",
-    q7 = "b",
-    q8 = "a",
-    q9 = "a",
-    q10 = "c"
+    q1: "c",
+    q2: "a",
+    q3: "d",
+    q4: "d",
+    q5: "a",
+    q6: "a",
+    q7: "b",
+    q8: "a",
+    q9: "a",
+    q10: "c"
 }
+
+"""
+Creating a for loop to iterate the question and its correct answers.
+"""
+for question in questions:
+    print(question)
+    """
+    The skip variable moves on to the next question,
+    without giving any score.
+    """
+    skip = input("Do you want to skip the question? (yes/no):\n")
+    if skip == "yes":
+        continue
+
+    answer = input("Enter the correct answer a/b/c/d: \n")
+    if answer == questions[question]:
+        print("Correct Answer. You get 10 points!")
+        score = score + 10
+        print("The current score is:", score)
+    else:
+        print("Incorrect Answer.")
+    """
+    The quit variable when chosen, stops the quiz 
+    and the we come out of the for loop.
+    """    
+    quit = input("Do you want to quit the quiz? (yes/no):\n")
+    if quit == "yes":
+        break    
+
+print("The Final Score is:", score)        
